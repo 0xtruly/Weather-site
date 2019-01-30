@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script src="script.js"></script>
+   
     <title>Weather site</title>
  
 </head>
@@ -71,27 +71,33 @@
     <!-- The Weather -->
     <div class="weather w3-container">
         <div class="w3-content">
-    
-
             <div class="w3-twothird" id="weather">
-                <h1>The Weather</h1>
-                <button id="weather">Get your weather</button>
-                <p id="weather-result"></p>
-                <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-                <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+		    <h1>Weather<span id="ex">X</span>plorer</h1>
+                <button id="get-weather" onclick="getLocation()">Get your weather</button>
+		<p id="lat"></p>
+		<p id="lon"></p>
+	     </div>
+             <div id="weather-result">
+	     	<p>
+		   <span id="city"></span>
+		   <span id="country"></span>
+		</p>
+	         <p>
+                   <span id="temp"></span>
+                   <span class="temp" id="tempunit"></span>
+                </p>
+		<img src="" alt="" id="icon" class="desc">
+	     </div>
+             
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>Weather @2019</p>
+        <p id="date">Weather &copy;2019</p>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+    <script src="script.js"></script>
 </body>
 </html>
